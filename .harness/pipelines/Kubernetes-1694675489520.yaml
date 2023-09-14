@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_Kubernetes_1694675499089
+  name: Build Kubernetes
+  orgIdentifier: default
+  projectIdentifier: Kubernetes
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1694626757211
+        repoName: Theerdhankari/Kubernetes
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
