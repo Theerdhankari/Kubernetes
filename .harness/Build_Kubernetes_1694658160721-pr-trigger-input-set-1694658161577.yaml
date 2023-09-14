@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Kubernetes_1694658160721-pr-trigger-input-set
+  identifier: Build_Kubernetes_1694658160721prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: New
+  pipeline:
+    identifier: Build_Kubernetes_1694658160721
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
